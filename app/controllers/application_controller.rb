@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def goodbye
-	render html: "goodbye, cruel world!"
+	render file: "goodbye.html.erb"
   end
 end
