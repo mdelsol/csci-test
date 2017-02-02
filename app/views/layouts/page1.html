@@ -2,29 +2,107 @@
     <head>
         <style>
     body {
-      background-color: #FF9EE0;
+      background-color: grey;
     }
+    
+    caption {
+      border-radius: 5px 5px 0 0;
+    }
+    
+    table {
+      border-radius: 0 0 5px 5px;
+    }
+    
     caption, table, th, td {
       border: 1px solid black;
-      
     }
+    
+    caption {
+      color: #FFF;
+      padding: 5px;
+      background-color: #494847;
+    }
+    
+    tr, td {
+      padding: 4px;
+    }
+    
+    a {
+      color: #FFF;
+    }
+    
     a:link {
-      color: #AF4270;
+      background-color: #AF4270;
+      border-radius: 6px;
+      padding: 9px;
+      text-decoration: none;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 3s;
+      -webkit-transition-timing-function: ease;
+      -moz-transition-property: background-color;
+      -moz-transition-duration: 3s;
+      -moz-transition-timing-function: ease;
+      transition-property: background-color;
+      transition-duration: 3s;
+      transition-timing-function: ease;
     }
+    
     a:hover {
-      color: #56FF4D;
+      background-color: #411328;
     }
-    ul li img {
-        width, height: 10%;
+    
+    img {
+        width: 50%;
+    }
+    
+    ul li {
+      padding: 10px;
+    }
+    
+    .centered {
+      margin: auto;
+    }
+    
+    .centered ol li {
+      text-align: center;
+      list-style: none;
+      padding: 5px;
+    }
+    
+    nav {
+      background-color: #AF4270;
+      height: 5.6%;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    nav a {
+      float: left;
+      border-radius: 0px !important;
+      border-right: 1px solid #BCB9B5;
     }
   </style>
-    </head>
-    <body>
-        <ol>
+</head>
+<body>
+<nav>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+  <a href="#">Uno</a>
+</nav>
+<div class="centered">
+<ol>
   <li>One</li>
   <li>Two</li>
   <li>Three</li>
 </ol>
+</div>
 <table>
   <caption>Vendors</caption>
   <tr>
@@ -46,7 +124,7 @@
 <br />
 <ul>
   <li><a href="page2.html">Page 2</a></li>
-  <li><img src="../../assets/images/DelSolImg.jpg"></img></li>
+  <li><img src="/app/assets/images/DelSolImg.jpg"></img></li>
 </ul>
 </body>
 </html>
