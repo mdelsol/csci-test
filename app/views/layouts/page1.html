@@ -1,5 +1,6 @@
 <html>
     <head>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <style>
     body {
       background-color: grey;
@@ -82,10 +83,43 @@
       border-radius: 0px !important;
       border-right: 1px solid #BCB9B5;
     }
+    
+    #button {
+      width: 30px;
+      height: 20px;
+    }
   </style>
+  <script>
+    function iterate(num) {
+      for(var i = 0; i <= num; i++)
+      {
+        if(i == 0)
+          $("#tl").html("<tr>" + i + "</tr>");
+        else if(i % 3 == 0)
+          $("#tl").html("<tr>Fizz</tr>");
+        else if(i % 5 == 0)
+          $("#tl").html("<tr>Buzz</tr>");
+        else if(i % 3 == 0 && i % 5 == 0)
+          $("#tl").html("<tr>FizzBuzz</tr>");
+        else
+          $("#tl").html("<tr>" + i + "</tr>");
+      }
+    }
+    
+    $(document).click(function(event) {
+     if(event.target == $("#button"))
+     {
+       $("#ul").css("display", "none");
+     }
+     else
+     {
+       $("#ul").css("display", "inline");
+     }
+    });
+  </script>
 </head>
 <body>
-<nav>
+<nav id="nav">
   <a href="#">Uno</a>
   <a href="#">Uno</a>
   <a href="#">Uno</a>
@@ -126,5 +160,13 @@
   <li><a href="page2.html">Page 2</a></li>
   <li><img src="/app/assets/images/DelSolImg.jpg"></img></li>
 </ul>
+<input type="button" id="button" text="Click Me"></input>
+<ul id="ul">
+  <li>one</li>
+  <li>two</li>
+  <li>three</li>
+</ul>
+<input type="textarea" name="input" onkeydown="if(event.keyCode == 13) return iterate(this.value);"/>
+<table id="tl"></table>
 </body>
 </html>
