@@ -3,37 +3,15 @@
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <style>
     body {
-      background-color: grey;
+      background-color: #DBDBDB;
     }
     
-    caption {
-      border-radius: 5px 5px 0 0;
-    }
-    
-    table {
-      border-radius: 0 0 5px 5px;
-    }
-    
-    caption, table, th, td {
-      border: 1px solid black;
-    }
-    
-    caption {
-      color: #FFF;
-      padding: 5px;
-      background-color: #494847;
-    }
-    
-    tr, td {
-      padding: 4px;
-    }
-    
-    a {
+    nav a {
       color: #FFF;
     }
     
-    a:link {
-      background-color: #AF4270;
+    nav a:link {
+      background-color: #505050;
       border-radius: 6px;
       padding: 9px;
       text-decoration: none;
@@ -48,32 +26,18 @@
       transition-timing-function: ease;
     }
     
-    a:hover {
+    nav a:hover {
       background-color: #411328;
     }
     
     img {
         width: 50%;
     }
-    
-    ul li {
-      padding: 10px;
-    }
-    
-    .centered {
-      margin: auto;
-    }
-    
-    .centered ol li {
-      text-align: center;
-      list-style: none;
-      padding: 5px;
-    }
-    
+       
     nav {
-      background-color: #AF4270;
-      height: 5.6%;
+      background-color: #505050;
       position: fixed;
+      height: 36px;
       top: 0;
       width: 100%;
     }
@@ -84,89 +48,59 @@
       border-right: 1px solid #BCB9B5;
     }
     
-    #button {
-      width: 30px;
-      height: 20px;
+    nav a:last-child {
+	    height: 112px;
+	    width: 224px;
+	    display: inline;
+	    background-color: #DBDBDB;
+	    border: none;
+	    padding-left: 9%;
+	    margin-left: 18.3%;
+	    margin-right: 0;
+    }
+    
+    nav div img {
+	    max-height: 100%;
+    }
+    
+    #sign {
+	    z-index: 99;
+	    position: fixed;
+	    float: right;
+	    margin-left: 88%;
+	    -webkit-box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	    background-color: black;
+	    color: white;
+    }
+    
+    h1 {
+    	text-align: center;
+    	position: relative;
+    	margin-top: 70px;
+    	font-size: 70px;
+    }
+    
+    p {
+	    font-weight: 500;
+	    letter-spacing: 4px;
     }
   </style>
   <script>
-    function iterate(num) {
-      for(var i = 0; i <= num; i++)
-      {
-        if(i == 0)
-          $("#tl").html("<tr>" + i + "</tr>");
-        else if(i % 3 == 0)
-          $("#tl").html("<tr>Fizz</tr>");
-        else if(i % 5 == 0)
-          $("#tl").html("<tr>Buzz</tr>");
-        else if(i % 3 == 0 && i % 5 == 0)
-          $("#tl").html("<tr>FizzBuzz</tr>");
-        else
-          $("#tl").html("<tr>" + i + "</tr>");
-      }
-    }
-    
-    $(document).click(function(event) {
-     if(event.target == $("#button"))
-     {
-       $("#ul").css("display", "none");
-     }
-     else
-     {
-       $("#ul").css("display", "inline");
-     }
-    });
+   
   </script>
 </head>
 <body>
 <nav id="nav">
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
-  <a href="#">Uno</a>
+  <a href="#">Store</a>
+  <a href="#">Live Results</a>
+  <a href="#">Blog</a>
+  <a href="#">Forum</a>
+  <a href="#"><div><img src="/app/assets/images/templogo.png" alt="TempLogo" /></div></a>
 </nav>
-<div class="centered">
-<ol>
-  <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-</ol>
-</div>
-<table>
-  <caption>Vendors</caption>
-  <tr>
-    <td>Blue Gauntlet</td>
-    <td>Absolute Fencing Gear</td>
-    <td>Allstar</td>
-    <td>Uhlmann</td>
-    <td>Negrini</td>
-  </tr>
-</table><br />
-<table>
-  <caption>Weapons</caption>
-  <tr>
-    <td>Sabers</td>
-    <td>Foils</td>
-    <td>Epees</td>
-  </tr>
-</table>
+<a href="login.html"><button id="sign">Login / Signup</button></a>
 <br />
-<ul>
-  <li><a href="page2.html">Page 2</a></li>
-  <li><img src="/app/assets/images/DelSolImg.jpg"></img></li>
-</ul>
-<input type="button" id="button" text="Click Me"></input>
-<ul id="ul">
-  <li>one</li>
-  <li>two</li>
-  <li>three</li>
-</ul>
-<input type="textarea" name="input" onkeydown="if(event.keyCode == 13) return iterate(this.value);"/>
-<table id="tl"></table>
+<h1>Welcome</h1>
+<p>"Fencing site" aims to bring the ultimate user-friendly fencing experience to your fingertips. LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC LOREM IPSUM ETC ETC</p>
 </body>
 </html>
